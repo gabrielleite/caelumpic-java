@@ -1,0 +1,41 @@
+/* rodape fixado no final da pagina */
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+/* fim rodape fixado no final da pagina */
+
+.btn-edit:hover {
+	background-color: #488aff;
+}
+
+.btn-delete:hover {
+	background-color: #f53d3d;
+}
+
+.brand-logo img {
+	width: 150px;
+	margin: 10px;
+}
+
+footer .links a img {
+	width: 20px;
+	margin-right: 15px;
+}
+
+.card-action .row {
+	margin-bottom: unset;
+}
+
+.card-action .btn i {
+	font-size: 2rem;
+}
+
+.card-action .btn i.left {
+	margin-right: unset;
+}
