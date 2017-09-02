@@ -18,6 +18,14 @@ main {
 	background-color: #f53d3d;
 }
 
+.btn-full {
+	width: 100%;
+}
+
+.btn-full > div {
+	display: inline-block;
+}
+
 .brand-logo img {
 	width: 150px;
 	margin: 10px;

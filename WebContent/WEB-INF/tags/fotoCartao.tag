@@ -26,7 +26,7 @@
 					OBS.: Lembrar de declarar a taglig do JSTL no inicio do arquivo
 					para utilizacao do fmt:formatDate.
 				--%>
-				<fmt:formatDate value="${foto.dataCriacao}" pattern="dd/MM/yyyy" />
+				<fmt:formatDate value="${foto.dataCriacao.time}" pattern="dd/MM/yyyy" />
 			</p>
 		</div>
 		<div class="card-reveal">

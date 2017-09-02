@@ -52,9 +52,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn waves-effect waves-light" type="submit" name="action">
-					Enviar
-					<i class="material-icons right">send</i>
+				<button class="btn btn-full waves-effect waves-light" type="submit" name="action">
+					<div>
+						Enviar
+						<i class="material-icons right">send</i>
+					</div>
 				</button>
 			</div>
 	    </form>

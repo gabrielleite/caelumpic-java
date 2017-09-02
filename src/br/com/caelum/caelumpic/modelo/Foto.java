@@ -9,6 +9,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 /* Anotacao @Entity indica que essa classe representa uma tabela no BD.
  * Anotacao @Table possibilita um ajuste fino entre a tabela do BD e a classe Java.
  */
@@ -29,6 +31,7 @@ public class Foto {
 	/* Anotacao @Temporal indica o tipo de dado usado no BD para representar uma
 	 * medida de tempo.
 	 */
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Calendar dataCriacao;
 	
@@ -59,7 +62,7 @@ public class Foto {
 	public Calendar getDataCriacao() {
 		return dataCriacao;
 	}
-	public void setDataCricao(Calendar dataCriacao) {
+	public void setDataCriacao(Calendar dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
 }
