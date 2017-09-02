@@ -38,7 +38,7 @@
 		</div>
 		<div class="card-action">
 			<div class="row">
-				<a class="col s6 waves-effect waves-light btn btn-flat btn-edit">
+				<a href="formulario?id=${foto.id}" class="col s6 waves-effect waves-light btn btn-flat btn-edit">
 					<i class="material-icons left">edit</i>
 					Editar
 				</a>

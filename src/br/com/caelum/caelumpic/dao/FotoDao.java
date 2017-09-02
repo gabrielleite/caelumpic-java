@@ -31,4 +31,12 @@ public class FotoDao {
 	public void adiciona(Foto foto) {
 		manager.persist(foto);
 	}
+	
+	public void atualiza(Foto foto) {
+		manager.merge(foto);
+	}
+	
+	public Foto buscaPorId(Long id) {
+		return manager.find(Foto.class, id);
+	}
 }
