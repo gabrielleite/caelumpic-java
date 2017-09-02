@@ -30,7 +30,7 @@ public class Foto {
 	 * medida de tempo.
 	 */
 	@Temporal(TemporalType.DATE)
-	private Calendar dataCricao;
+	private Calendar dataCriacao;
 	
 	public Long getId() {
 		return id;
@@ -56,10 +56,10 @@ public class Foto {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Calendar getDataCricao() {
-		return dataCricao;
+	public Calendar getDataCriacao() {
+		return dataCriacao;
 	}
-	public void setDataCricao(Calendar dataCricao) {
-		this.dataCricao = dataCricao;
+	public void setDataCricao(Calendar dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 }
