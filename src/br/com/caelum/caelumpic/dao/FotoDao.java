@@ -27,4 +27,8 @@ public class FotoDao {
 		return manager.createQuery("Select f from Foto as f", Foto.class)
 				.getResultList();
 	}
+
+	public void adiciona(Foto foto) {
+		manager.persist(foto);
+	}
 }
