@@ -9,9 +9,4 @@ public class FotoController {
 	public String lista() {
 		return "/foto/lista";
 	}
-	
-	@RequestMapping("/foto/teste")
-	public String teste() {
-		return "/foto/teste";
-	}
 }
