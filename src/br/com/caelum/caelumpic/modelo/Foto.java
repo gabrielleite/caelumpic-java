@@ -9,9 +9,16 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/* Anotação @Entity indica que essa classe representa uma tabela no BD.
+ * Anotação @Table possibilita um ajuste fino entre a tabela do BD e a classe Java.
+ */
 @Entity
 @Table(name="fotos")
 public class Foto {
+	/* Anotação @Id indica que esse atributo representa a chave primária da tabela no BD.
+	 * Anotação @GeneratedValue define a forma de geração do valor da chave primária.
+	 * O valor é delegar ao BD a geração.
+	 */
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -19,6 +26,9 @@ public class Foto {
 	private String descricao;
 	private String endereco;
 	
+	/* Anotação @Temporal indica o tipo de dado usado no BD para representar uma
+	 * medida de tempo.
+	 */
 	@Temporal(TemporalType.DATE)
 	private Calendar dataCricao;
 	
