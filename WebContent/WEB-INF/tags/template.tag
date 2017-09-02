@@ -41,8 +41,6 @@
 				<jsp:doBody/>
 				
 			</div>
-			
-			<!-- ADICIONAR FAB ADD FOTO -->
 		</main>
 		
 		<footer class="page-footer">

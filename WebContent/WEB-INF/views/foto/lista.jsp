@@ -14,5 +14,11 @@
 				<caelum:fotoCartao foto="${foto}"/>
 			</c:forEach>
 		</div>
+		
+		<div class="fixed-action-btn">
+			<a href="formulario" class="btn-floating btn-large red darken-4">
+				<i class="large material-icons">add_a_photo</i>
+			</a>
+		</div>
 	</jsp:body>
 </caelum:template>
