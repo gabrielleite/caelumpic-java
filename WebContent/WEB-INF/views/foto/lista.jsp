@@ -9,8 +9,10 @@
 			OBS.: Lembrar de declarar a taglig do JSTL no inicio do arquivo para
 			utilizacao do c:forEach.
 		--%>
-		<c:forEach items="${fotos}" var="foto">
-			<caelum:fotoCartao foto="${foto}"/>
-		</c:forEach>
+		<div class="row">
+			<c:forEach items="${fotos}" var="foto">
+				<caelum:fotoCartao foto="${foto}"/>
+			</c:forEach>
+		</div>
 	</jsp:body>
 </caelum:template>
