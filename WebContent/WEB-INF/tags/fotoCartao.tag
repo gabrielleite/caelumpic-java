@@ -1,10 +1,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
-	Criação de um atributo obrigatório chamado foto para a tag fotoCartao.
-	E definição que o atributo deve receber uma informação do tipo Foto.
+	Criacao de um atributo obrigatorio chamado foto para a tag fotoCartao.
+	E definicao que o atributo deve receber uma informacao do tipo Foto.
 	
-	A partir de agora, sempre que quiser acessar a informação da foto
-	que for passada como parâmetro para essa tag, basta fazer:
+	A partir de agora, sempre que quiser acessar a informacao da foto
+	que for passada como parametro para essa tag, basta fazer:
 	
 	${foto.titulo}, ${foto.descricao}, ${foto.endereco} e assim por diante. 
 --%>
@@ -22,10 +22,10 @@
 				</span>
 				<p>
 					<%--
-						Formatação da data de criação da foto no padrão dia/mês/ano.
+						Formatacao da data de criacao da foto no padrao dia/mes/ano.
 						
-						OBS.: Lembrar de declarar a taglig do JSTL no início do arquivo
-						para utilização do fmt:formatDate.
+						OBS.: Lembrar de declarar a taglig do JSTL no inicio do arquivo
+						para utilizacao do fmt:formatDate.
 					--%>
 					<fmt:formatDate value="${foto.dataCriacao}" pattern="dd/MM/yyyy" />
 				</p>

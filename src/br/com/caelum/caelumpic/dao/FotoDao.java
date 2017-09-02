@@ -9,19 +9,19 @@ import org.springframework.stereotype.Repository;
 
 import br.com.caelum.caelumpic.modelo.Foto;
 
-/* Anotação @Repository habilita o dao a ser injetado em outras classes
- * através da anotação @Autowired.
+/* Anotacao @Repository habilita o dao a ser injetado em outras classes
+ * atraves da anotacao @Autowired.
  */
 @Repository
 public class FotoDao {
-	/* Anotação @PersistenceContext injeta uma instância de EntityManager.
+	/* Anotacao @PersistenceContext injeta uma instancia de EntityManager.
 	 */
 	@PersistenceContext
 	private EntityManager manager;
 	
 	public List<Foto> lista() {
 		
-		/* O segundo parâmetro Foto.class garante que o retorno é
+		/* O segundo parametro Foto.class garante que o retorno eh
 		 * referente a essa classe.
 		 */
 		return manager.createQuery("Select f from Foto as f", Foto.class)
