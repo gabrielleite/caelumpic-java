@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.caelum.caelumpic.dao.FotoDao;
 import br.com.caelum.caelumpic.modelo.Foto;
@@ -83,5 +84,16 @@ public class FotoController {
 			dao.adiciona(foto);
 		}
 		return "redirect:/foto/lista";
+	}
+	
+	/* Anotacao @ResonseBody devolve status 200 para a requisicao HTTP caso nao
+	 * tenha ocorrido nenhum problema. Alem disso, qualquer retorno dado pelo metodo
+	 * sera incluido no corpo da resposta.
+	 */
+	@ResponseBody
+	@Transactional
+	@RequestMapping("/foto/remove")
+	public void remove(Foto foto) {
+		dao.remove(foto);
 	}
 }

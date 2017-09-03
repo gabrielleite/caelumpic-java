@@ -36,6 +36,18 @@ public class FotoDao {
 		manager.merge(foto);
 	}
 	
+	public void remove(Foto foto) {
+		/* O JPA funciona como uma maquina de estados. De acordo com a sua
+		 * definicao, nao eh possivel excluir um objeto que tenha sido recuperado em
+		 * outra transacao. Por isso, eh necessario recuperar novamente o objeto do BD
+		 * e so apos excluir.
+		 * 
+		 * Mais informacoes no FJ-25.
+		 */
+		foto = manager.getReference(Foto.class, foto.getId());
+		manager.remove(foto);
+	}
+	
 	public Foto buscaPorId(Long id) {
 		return manager.find(Foto.class, id);
 	}

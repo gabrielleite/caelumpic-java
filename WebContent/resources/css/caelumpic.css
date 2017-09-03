@@ -36,9 +36,8 @@ footer .links a img {
 	margin-right: 15px;
 }
 
-.card .card-image {
-	min-height: 235px;
-	max-height: 235px;
+.card .card-image img {
+	height: 235px;
 }
 
 .card-action .row {

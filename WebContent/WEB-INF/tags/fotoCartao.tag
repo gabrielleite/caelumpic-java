@@ -9,7 +9,7 @@
 	${foto.titulo}, ${foto.descricao}, ${foto.endereco} e assim por diante. 
 --%>
 <%@ attribute name="foto" required="true" type="br.com.caelum.caelumpic.modelo.Foto" %>
-<div class="col s12 m6 l4">
+<div class="col s12 m6 l4 card-photo">
 	<div class="card sticky-action">
 		<div class="card-image waves-effect waves-block waves-light">
 			<img class="activator" src="${foto.endereco}">
@@ -42,11 +42,29 @@
 					<i class="material-icons left">edit</i>
 					Editar
 				</a>
-				<a class="col s6 waves-effect waves-light btn btn-flat btn-delete">
+				<a data-gt="${foto.id}" class="col s6 waves-effect waves-light btn btn-flat btn-delete">
 					<i class="material-icons left">delete_forever</i>
 					Remover
 				</a>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+	<script>
+		$('a.btn-delete').click(function(event) {
+			let fotoId = $(event.target).attr('data-gt');
+			console.log(fotoId);
+			$.post('remove', {id: fotoId})
+				.done(function(data) {
+					console.log(data);
+					$(event.target).closest('div.card-photo').remove();
+					Materialize.toast('Foto removida!', 4000);
+				})
+				.fail(function(data) {
+					console.log(data);
+					Materialize.toast('Erro ao remover foto!', 4000);
+				});
+		});
+	</script>
 </div>
