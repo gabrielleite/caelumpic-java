@@ -35,6 +35,10 @@ A seguir serão descritos os passos necessários para desenvolver a aplicação.
 > Em breve.
 ### Remoção de Foto
 > Em breve.
+### Validação de Dados
+> Em breve.
+### Permissão e Autorização
+> Em breve.
 ### Extras
 > Em breve.
 
