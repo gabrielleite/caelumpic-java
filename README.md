@@ -50,7 +50,12 @@ A seguir, serão descritos os passos necessários para desenvolver a aplicação
 > Em breve.
 
 ### Extras
+
+#### Listagem de Fotos
 1. Carregamento das fotos a medida que o usuário necessitar (`Lazy Loading`). Pode-se utilizar uma paginação ou carregamento de fotos a medida que o usuário for rolando a página para baixo.
+
+#### Inserção de Foto
+1. Pré-visualização da foto que será cadastrada, carregando a foto ao lado do formulário.
 1. Ao término do cadastro de foto, exibir mensagem para o usuário informando sobre o sucesso da operação.
 
 ## Soluções
